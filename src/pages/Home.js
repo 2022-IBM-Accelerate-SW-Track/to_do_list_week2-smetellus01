@@ -24,16 +24,17 @@ class Home extends Component {
       return
     }
     else{
-      let new_list
+      
       todo.id = Math.random();
-      new_list = [...this.state.todos, todo];
+      
+      let new_list = [...this.state.todos, todo];
     
     // Update the local state with the new array.
     this.setState({
       todos: new_list,
     });
   };
-  }
+  };
 
   deleteTodo = (id) => {
     const todos = this.state.todos.filter((todo) => {
